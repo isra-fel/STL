@@ -31,6 +31,7 @@ jobs:
       - name: Gather stats
         run: |
           export SECRET_GITHUB_PERSONAL_ACCESS_TOKEN=${{ github.token }}
+          export NO_TTY=TRUE
           npm install
           node gather_stats.js
 
